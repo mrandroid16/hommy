@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOMMY</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* التول بار */
+    .toolbar {
+      background: linear-gradient(to right, #3e334e, #6c5c74); /* جرايدنت */
+      padding: 30px 50px;
+      margin: 10px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .toolbar img {
+      height: 70px;
+      margin-right: 20px;
+    }
+
+    .toolbar h1 {
+      color: white;
+      font-size: 36px;
+      margin: 0;
+    }
+
+    /* تعريف البرنامج */
+    .content {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .content h2 {
+      color: #1976d2;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background-color: #1976d2;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    /* سلايدر */
+    .slider {
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* الفوتر */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    footer a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- التول بار -->
+  <div class="toolbar">
+    <img src="logo.png" alt="HOMMY Logo">
+    <h1>HOMMY</h1>
+  </div>
+
+  <!-- تعريف البرنامج -->
+  <div class="content">
+    <h2>عن البرنامج</h2>
+    <p>برنامج هومي هو أول برنامج مجاني مخصص لكل ما يتعلق باحتياجات المنزل!</p>
+    <p>هدفنا هو تسهيل حياتك بتقديم حلول مبتكرة لكل متطلبات البيت من مكان واحد بسهولة وسرعة.</p>
+    <p>احصل على أفضل العروض والمنتجات المنزلية بأفضل الأسعار مباشرة عبر تطبيق HOMMY.</p>
+
+    <!-- زر التحميل -->
+    <a class="download-button" href="#">سياسة الخصوصية</a>
+  </div>
+
+  <!-- السلايدر -->
+  <div class="slider">
+    <img class="slides" src="shot1" alt="صورة 1">
+    <img class="slides" src="shot2.jpg" alt="صورة 2">
+    <img class="slides" src="shot3.jpg" alt="صورة 3">
+<img class="slides" src="shot4.jpg" alt="صورة 3">
+<img class="slides" src="shot5.jpg" alt="صورة 3">
+<img class="slides" src="shot6.jpg" alt="صورة 3">
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 2000); // يغير الصورة كل 3 ثواني
+    }
+  </script>
+
+  <!-- الفوتر -->
+  <footer>
+    <a href="https://creative-programming.link/privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
